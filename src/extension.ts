@@ -60,7 +60,8 @@ export function activate(context: vscode.ExtensionContext) {
 											let qualifier = (result[i].Null == "NO" && result[i].Default == null) ? "required" : (result[i].Null == "NO" ? result[i].Default : "nullable");
 											let cItem = new vscode.CompletionItem(result[i].Field, vscode.CompletionItemKind.Property);
 											cItem.detail = result[i].Type;
-											// cItem.label2 = { type: result[i].Type, qualifier: qualifier, name: result[i].Field };
+											// @ts-ignore
+											cItem.label2 = { type: result[i].Type, qualifier: qualifier, name: result[i].Field };
 											suggestions.push(cItem);
 										}
 										resolve(suggestions);
@@ -74,7 +75,8 @@ export function activate(context: vscode.ExtensionContext) {
 									let qualifier = (result[i].Null == "NO" && result[i].Default == null) ? "required" : (result[i].Null == "NO" ? result[i].Default : "nullable");
 									let cItem = new vscode.CompletionItem(result[i].Field, vscode.CompletionItemKind.Property);
 									cItem.detail = result[i].Type;
-									// cItem.label2 = { type: result[i].Type, qualifier: qualifier, name: result[i].Field };
+									// @ts-ignore
+									cItem.label2 = { type: result[i].Type, qualifier: qualifier, name: result[i].Field };
 									suggestions.push(cItem);
 								}
 								resolve(suggestions);
