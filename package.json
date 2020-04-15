@@ -1,0 +1,79 @@
+{
+	"name": "php-model-database-properties",
+	"displayName": "PhpModelDatabaseProperties",
+	"description": "Php Model Database Properties gives you the ability to show the attributes of php variable from table, such as $user->email from users table. note that this is still in early stage development, and may not work properly. I have created it to help me write faster code.",
+	"publisher": "aliawwad",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.44.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:phpmodeldatabaseproperties.helloWorld"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "TypeScript",
+			"properties": {
+				"php.suggest.basic": {
+					"type": "boolean",
+					"default": true,
+					"description": "Complete functions with their parameter signature."
+				},
+				"php.validate.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "Complete functions with their parameter signature."
+				},
+				"mysql.connection.hostname": {
+					"type": "string",
+					"default": "localhost",
+					"description": "MySQL hostname."
+				},
+				"mysql.connection.database": {
+					"type": "string",
+					"default": "",
+					"description": "MySQL Database."
+				},
+				"mysql.connection.user": {
+					"type": "string",
+					"default": "root",
+					"description": "MySQL User."
+				},
+				"mysql.connection.password": {
+					"type": "string",
+					"default": "",
+					"description": "MySQL Password."
+				}
+			}
+		},
+		"commands": []
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.44.0",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"eslint": "^6.8.0",
+		"@typescript-eslint/parser": "^2.26.0",
+		"@typescript-eslint/eslint-plugin": "^2.26.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.1",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"mysql": "^2.18.1"
+	}
+}
