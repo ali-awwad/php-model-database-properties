@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
 					return new Promise((resolve, reject) => {
 						// get table name based on definition; such as $item = new User();
 						let tableName = helpers.findVariableDefinition(document, selection, position);
-
+						
 						// START By Table Name
 						connection.connectionInstance.query('Show columns from ' + tableName, function (err: any, result: string | any[]) {
 							if (err) {
