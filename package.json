@@ -3,6 +3,7 @@
 	"displayName": "PhpModelDatabaseProperties",
 	"description": "Php Model Database Properties gives you the ability to show the attributes of php variable from table, such as $user->email from users table. note that this is still in early stage development, and may not work properly. I have created it to help me write faster code.",
 	"publisher": "aliawwad",
+	"repository": {"type": "git","url": "https://github.com/ali-awwad/php-model-database-properties"},
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.44.0"
